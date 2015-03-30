@@ -2,6 +2,8 @@
 # the following line to use "http://" instead
 source 'https://rubygems.org'
 
+gem 'rack-contrib'
+
 gem "middleman", "~>3.3.10"
 
 gem "bootstrap-sass", :require => false
@@ -16,5 +18,6 @@ gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 # Windows does not come with time zone data
 gem "tzinfo-data", platforms: [:mswin, :mingw]
 
-gem "rb-inotify"
-gem "therubyracer"
+group :development do
+  gem 'unicorn'
+end
