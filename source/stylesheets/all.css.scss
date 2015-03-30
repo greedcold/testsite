@@ -1,5 +1,12 @@
 @charset "utf-8";
 
+/*плавающее меню */
+#prod{
+  top: 100px;
+  position: fixed;
+  z-index: 1000;
+}
+
 body {
  }
 
