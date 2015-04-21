@@ -6,9 +6,6 @@
 # - `/foo` will try to serve `build/foo` or `build/foo.html` in that order
 # - missing files will try to serve build/404.html or a tiny default 404 page
 
-require 'rack'
-require 'rack/contrib/try_static'
-
 require File.expand_path("../rack_try_static", __FILE__)
 
 use ::Rack::TryStatic,
