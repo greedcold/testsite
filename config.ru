@@ -9,21 +9,11 @@
 require 'rack'
 require 'rack/contrib/try_static'
 
-use Rack::Deflater
-use Rack::TryStatic,
-  root: 'tmp',
-  urls: %w[/],
-  try: %w[.html index.html /index.html]
+require File.expand_path("../rack_try_static", __FILE__)
 
-FIVE_MINUTES=300
+use ::Rack::TryStatic,
+  :root => "build",
+  :urls => ["/"],
+  :try => [".html", "index.html", "/index.html"]
 
-run lambda { |env|
-  [
-    404,
-    {
-      'Content-Type'  => 'text/html',
-      'Cache-Control' => "public, max-age=#{FIVE_MINUTES}"
-    },
-    ['File not found']
-  ]
-}
+run lambda { [404, {"Content-Type" => "text/plain"}, ["File not found!"]] }
