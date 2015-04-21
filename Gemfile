@@ -25,5 +25,4 @@ group :development do
    gem "heroku"
    gem "watchr"
    gem "rb-fsevent"
-   gem 'unicorn'
 end
