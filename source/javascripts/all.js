@@ -2,7 +2,7 @@
 //= require jquery
 
 /* отвечает за фиксацию меню по всей странице */
-  var h_hght = 100; // высота шапки
+/*  var h_hght = 100; // высота шапки
   var h_mrg = 0;    // отступ когда шапка уже не видна
   $(function(){
    $(window).scroll(function(){
@@ -17,7 +17,7 @@
   });
 
 /* отвечает за плавный переход к якорю на странице*/
-$(function(){
+/*$(function(){
   $('a[href^="#"]').click(function(){
     var target = $(this).attr('href');
   $('html, body').animate({scrollTop: $(target).offset().top}, 800);//800 -длительность скроллинга в мс
